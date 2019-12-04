@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('web.page.dashboard.index');
 });
+
+Route::get('/login', function () {
+    return view('web.page.login.index');
+});
