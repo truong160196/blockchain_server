@@ -215,3 +215,24 @@
 
     });
 </script>
+<script>
+    var run_waitMe = function(el, stop) {
+        if (stop) {
+            $(el).waitMe('hide');
+        } else {
+            $(el).waitMe({
+                effect: 'bounce',
+                text: 'Please wait...',
+                bg: 'rgba(255,255,255,0.7)',
+                color: '#000',
+                maxSize: '',
+                waitTime: -1,
+                textPos: 'vertical',
+                fontSize: '',
+                source: "{{asset('/assets/images/loading_heineken.gif')}}",
+                onClose: function(el) {}
+            });
+        }
+    };
+
+</script>

@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('web.page.dashboard.index');
 });
 
-Route::get('/login', function () {
-    return view('web.page.login.index');
+//
+Route::group(['namespace' => 'Admin\Utils'], function () {
+    Route::get('/login', 'UtilsController@admin_login')->name('admin.page.login');
 });
