@@ -44,8 +44,8 @@
                             <input
                                     class="form-control input100"
                                     type="password"
-                                    id="pass"
-                                    name="pass"
+                                    id="password"
+                                    name="password"
                                     placeholder="Password"
                                     data-parsley-validation-threshold="1"
                                     data-parsley-trigger="keyup"

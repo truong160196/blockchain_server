@@ -13,10 +13,7 @@ use Illuminate\Pagination\Paginator;
 use Aris\LaravelLocalization\Facades\LaravelLocalization;
 use Validator;
 use Carbon\Carbon;
-use Maatwebsite\Excel\Facades\Excel;
 use phpseclib\Crypt\RSA;
-use Intervention\Image\ImageManagerStatic as Image;
-use GrahamCampbell\Throttle\Facades\Throttle;
 use Hash;
 
 class AjaxController extends Controller
@@ -73,40 +70,29 @@ class AjaxController extends Controller
     public function admin_login_ajax(Request $request)
     {
         $rules = array(
-            'username' => 'required|min:9|max:12|phonevn',
-            'password' => 'required|min:1|max:128',
+            'username' => 'required|min:3|max:16',
+            'password' => 'required|min:6|max:32',
         );
         $validator = Validator::make($request->all(), $rules);
+
         if ($validator->fails()) {
             return $this->JsonExport(403, __('app.error_403'));
         } else {
-            $throttler = Throttle::get($request, app('setting_main')->limit_login, app('setting_main')->limit_login_waiting);
             try {
-                if (!$throttler->check()) {
-                    return $this->JsonExport(401, __('app.login_limit', ['count' => app('setting_main')->limit_login, 'time' => app('setting_main')->limit_login_waiting]));
-                }
 
                 $credentials = [
-                    'phone' => $request->username,
+                    'username' => $request->username,
                     'password' => $request->password,
                     'status' => 1
                 ];
+
                 if (\Auth::attempt($credentials)) {
-                    if(in_array("Delivery", $this->getRoleUser())) {
-                        $throttler->hit();
-                        if (Auth::user()) {
-                            Auth::logout();
-                        }
-                        return $this->JsonExport(403, __('app.wrong_password'));
-                    }
                     return $this->JsonExport(200, __('app.login_success'));
                 } else {
-                    $throttler->hit();
                     return $this->JsonExport(403, __('app.wrong_password'));
                 }
 
             } catch (\Exception $e) {
-                $throttler->hit();
                 return $this->JsonExport(500, __('app.error_500'));
             }
         }

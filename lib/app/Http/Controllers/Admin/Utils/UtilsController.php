@@ -13,10 +13,6 @@ use Illuminate\Pagination\Paginator;
 use Aris\LaravelLocalization\Facades\LaravelLocalization;
 use Validator;
 use Carbon\Carbon;
-use Maatwebsite\Excel\Facades\Excel;
-use phpseclib\Crypt\RSA;
-use GrahamCampbell\Throttle\Facades\Throttle;
-use App\Jobs\Otp;
 use Hash;
 
 class UtilsController extends Controller

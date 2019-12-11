@@ -20,7 +20,7 @@
     var loginSubmitForm = function() {
         run_waitMe('.limiter');
         $.ajax({
-            url: '/ajax/utils/login',
+            url: '/api/utils/login',
             type: "POST",
             data: $("#form_login").serialize(),
             success: function(response) {
@@ -29,6 +29,7 @@
                         type: 'success',
                         title: response.msg
                     });
+                    location.reload();
                 } else {
                     Swal.fire({
                         type: 'warning',
