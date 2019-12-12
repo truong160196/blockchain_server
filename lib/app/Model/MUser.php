@@ -57,6 +57,7 @@ class MUser extends Authenticatable implements JWTSubject
         'email_verified_at',
 		'code',
 		'status',
+        'role_id',
 		'remember_token',
 		'otp',
         'otp_expired',
@@ -66,6 +67,10 @@ class MUser extends Authenticatable implements JWTSubject
         'last_update_password',
 		'last_local_login'
 	];
+
+    public  function role() {
+        return $this->belongsTo(Role::class, 'role_id');
+    }
 
     public function getJWTIdentifier()
     {

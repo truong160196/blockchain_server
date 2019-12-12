@@ -27,8 +27,11 @@ class UtilsController extends Controller
     public function admin_login(Request $request)
     {
         try {
+//            $user = auth()->user();
+
+//            dd($user->role->name);
             if (Auth::check()) {
-                return view('web.page.dashboard.index');
+                return redirect()->route('admin.page.dashboard');
             } else {
                 return view('web.page.login.index');
             }

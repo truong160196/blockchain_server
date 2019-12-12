@@ -12,25 +12,16 @@ use Illuminate\Pagination\Paginator;
 use Aris\LaravelLocalization\Facades\LaravelLocalization;
 use Validator;
 use Carbon\Carbon;
-use GrahamCampbell\Throttle\Facades\Throttle;
 
 class AdminController extends Controller
 {
-    protected $instance;
-    protected $lang;
-
-    public function __construct()
-    {
-        $this->instance = $this->instance(\App\Http\Helper\Admin\Helper::class);
-    }
-
-    public function admin_login(Request $request)
+     public function dashboard()
     {
         try {
             if (Auth::check()) {
-                return redirect()->route(app('setting_main')->default_page);
+                return view('page.admin.dashboard.index');
             } else {
-                return view('web.page.login.index');
+                return redirect()->route('admin.page.login');
             }
         } catch (\Exception $e) {
             return redirect()->route('admin.page.login');

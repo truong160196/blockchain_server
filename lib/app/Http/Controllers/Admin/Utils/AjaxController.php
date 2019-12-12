@@ -86,7 +86,7 @@ class AjaxController extends Controller
                     'status' => 1
                 ];
 
-                if (\Auth::attempt($credentials)) {
+                if (Auth::attempt($credentials, true)) {
                     return $this->JsonExport(200, __('app.login_success'));
                 } else {
                     return $this->JsonExport(403, __('app.wrong_password'));

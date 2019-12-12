@@ -14,11 +14,19 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::disableForeignKeyConstraints();
+        Schema::dropIfExists('roles');
         Schema::dropIfExists('users');
         Schema::dropIfExists('wallets');
         Schema::dropIfExists('transactions');
         Schema::dropIfExists('join_users_transactions');
         Schema::enableForeignKeyConstraints();
+
+        Schema::create('roles', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('guard_name');
+            $table->timestamps();
+        });
 
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
@@ -43,8 +51,16 @@ class CreateUsersTable extends Migration
             $table->timestamp('last_local_login')->nullable();
             $table->tinyInteger('is_delete')->default(0);
             $table->unsignedTinyInteger('status')->default(1);
+            // RELATIONSHIP
+            $table->unsignedBigInteger('role_id');
+            $table->foreign('role_id')
+                ->references('id')
+                ->on('roles')
+                ->onDelete('cascade');
+
             $table->rememberToken();
             $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
         });
 
         Schema::create('wallets', function (Blueprint $table) {
@@ -57,12 +73,10 @@ class CreateUsersTable extends Migration
             // private key
             $table->string('pk')->nullable();
             $table->string('public_key')->nullable();
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
-            $table->softDeletes();
             // RELATIONSHIP
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->timestamps();
         });
 
         Schema::create('transactions', function (Blueprint $table) {
@@ -77,8 +91,7 @@ class CreateUsersTable extends Migration
             $table->string('detail')->nullable();
             $table->string('note')->nullable();
             $table->string('status')->nullable();
-            $table->timestamp('created_at')->useCurrent();
-            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamps();
         });
 
         Schema::create('join_users_transactions', function (Blueprint $table) {
@@ -87,6 +100,7 @@ class CreateUsersTable extends Migration
             // RELATIONSHIP
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('transaction_id')->references('id')->on('transactions')->onDelete('cascade');
+            $table->timestamps();
         });
 
     }
@@ -99,6 +113,7 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
+        Schema::dropIfExists('roles');
         Schema::dropIfExists('users');
         Schema::dropIfExists('wallets');
         Schema::dropIfExists('transactions');
