@@ -10,9 +10,22 @@
    @include('layout_user.main_css')
   </head>
   <body>
+  <div class="page-wrapper">
+    <!-- start preloader -->
+    <div class="preloader">
+      <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+    </div>
+    <!-- end preloader -->
+
     @include('layout_user.header')
     @yield('page_content')
     @include('layout_user.footer')
     @include('layout_user.main_js')
+  </div>
   </body>
 </html>
