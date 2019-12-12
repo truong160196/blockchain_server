@@ -33,7 +33,7 @@ class UtilsController extends Controller
             if (Auth::check()) {
                 return redirect()->route('admin.page.dashboard');
             } else {
-                return view('web.page.login.index');
+                return view('page.login.index');
             }
         } catch (\Exception $e) {
             return redirect()->route('admin.page.login');

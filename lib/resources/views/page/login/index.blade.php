@@ -6,7 +6,7 @@
 @endsection
 
 @section('css')
-    <link rel="stylesheet" href="{{asset('assets/css/login.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css_admin/login.css')}}">
 @endsection
 
 @section('page_content')
@@ -93,5 +93,5 @@
 @endsection
 
 @section('js')
-    <script src="{{asset('assets/js/login.js')}}"></script>
+    <script src="{{asset('assets/js_admin/login.js')}}"></script>
 @endsection
