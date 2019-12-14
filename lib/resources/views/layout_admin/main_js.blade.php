@@ -2,7 +2,7 @@
 <script type="text/javascript" src="{{asset('assets/lib/jquery-ui/js/jquery-ui.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/lib/popper.js/js/popper.js')}}"></script>
 <script type="text/javascript"  src="{{asset('assets/lib/bootstrap/js/bootstrap.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/js/perfect-scrollbar.jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js_admin/perfect-scrollbar.jquery.min.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/lib/jquery.cookie/js/jquery.cookie.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/lib/datatables/js/jquery.dataTables.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/lib/datatables-responsive/js/dataTables.responsive.js')}}"></script>
@@ -28,13 +28,13 @@
 <script type="text/javascript" src="{{asset('assets/lib/isotope/isotope.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/lib/sweet2/sweet2.js')}}"></script>
 <script type="text/javascript" src="{{asset('assets/lib/autoNumeric/autoNumeric.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/js/slim.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js_admin/slim.js')}}"></script>
 {{--JS library--}}
-<script type="text/javascript"  src="{{asset('assets/js/jquery.bootstrap-wizard.js')}}"></script>
-<script type="text/javascript"  src="{{asset('assets/js/bootstrap-material-design.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/js/chartist.min.js')}}"></script>
-<script type="text/javascript" src="{{asset('assets/js/material-dashboard.js?v=2.1.1')}}"></script>
-<script type="text/javascript" src="{{asset('assets/js/main.js')}}"></script>
+<script type="text/javascript"  src="{{asset('assets/js_admin/jquery.bootstrap-wizard.js')}}"></script>
+<script type="text/javascript"  src="{{asset('assets/js_admin/bootstrap-material-design.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js_admin/chartist.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js_admin/material-dashboard.js?v=2.1.1')}}"></script>
+<script type="text/javascript" src="{{asset('assets/js_admin/main.js')}}"></script>
 @yield('js')
 {{--<script>$(window).on('load', function(){if($('.se-pre-con').length > 0) {$(".se-pre-con").fadeOut("slow");}});</script>--}}
 <script>

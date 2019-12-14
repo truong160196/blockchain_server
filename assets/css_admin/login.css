@@ -382,6 +382,17 @@ iframe {
     }
 }
 
+.button-group {
+    width: 100%;
+    margin-top: 15px;
+    text-align: center;
+    justify-items: center;
+}
 
-
-
+.btn-login {
+    background: none;
+    color: white;
+    border: 1px solid;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+}

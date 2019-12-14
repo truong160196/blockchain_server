@@ -6,9 +6,10 @@
                 <div class="col col-sm-4">
                     <div class="social">
                         <ul>
-                            <li><a href="#">Faq</a></li>
-                            <li><a href="#">Help Desk</a></li>
-                            <li><a href="#">Support</a></li>
+                            <li>
+                                <a href="{{route('admin.page.faq')}}">Faq</a>
+                            </li>
+                            <li><a href="{{route('admin.page.account')}}">Account</a></li>
                         </ul>
                     </div>
                 </div>
@@ -25,7 +26,7 @@
                 </div>
                 <div class="col col-sm-4">
                     <div class="text">
-                        <p> <a href=""><span>Join Us</span></a> </p>
+                        <p><a href="{{route('admin.page.login')}}"><span>Login</span></a> </p>
                     </div>
                 </div>
             </div>
@@ -46,72 +47,21 @@
             <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
                 <button class="close-navbar"><i class="ti-close"></i></button>
                 <ul class="nav navbar-nav">
-                    <li class="menu-item-has-children">
-                        <a href="#">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="index.html">Home Default</a></li>
-                            <li><a href="index-2.html">Home Style 2</a></li>
-                            <li><a href="index-3.html">Home Style 3</a></li>
-                            <li><a href="index-4.html">Home Style 4</a></li>
-                            <li><a href="index-5.html">Home Style 5</a></li>
-                        </ul>
+                    <li>
+                        <a href="{{route('admin.page.home')}}">Home</a>
                     </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Causes</a>
-                        <ul class="sub-menu">
-                            <li><a href="causes.html">Causes</a></li>
-                            <li><a href="causes-s2.html">Causes style 2</a></li>
-                            <li><a href="causes-single.html">Causes single</a></li>
-                        </ul>
+                    <li>
+                        <a href="{{route('admin.page.donate.list')}}">Donate</a>
                     </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="team.html">Volunteer</a></li>
-                            <li><a href="testimonials.html">Testimonials</a></li>
-                            <li><a href="testimonials-s2.html">Testimonials style 2</a></li>
-                            <li><a href="shop.html">Shop</a></li>
-                            <li><a href="shop-single.html">Shop Single</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="404.html">404</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
+                    <li>
+                        <a href="{{route('admin.page.auction.list')}}">Auction</a>
                     </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Event</a>
-                        <ul class="sub-menu">
-                            <li><a href="event.html">Event</a></li>
-                            <li><a href="event-s2.html">Event style 2</a></li>
-                            <li><a href="event-single.html">Event single</a></li>
-                        </ul>
+                    <li>
+                        <a href="{{route('admin.page.contact')}}">Contact</a>
                     </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Gallery</a>
-                        <ul class="sub-menu">
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="projects-s2.html">Projects style 2</a></li>
-                            <li><a href="project-single.html">Project single</a></li>
-                        </ul>
+                    <li>
+                        <a href="{{route('admin.page.about')}}">About</a>
                     </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog.html">Blog Default</a></li>
-                            <li><a href="blog-grid.html">Blog Grid</a></li>
-                            <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                            <li><a href="blog-fullwidth.html">Blog full width</a></li>
-                            <li class="menu-item-has-children">
-                                <a href="#Level3">Blog Details</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-single.html">Blog Single Default</a></li>
-                                    <li><a href="blog-single-left-sidebar.html">Blog single left sidebar</a></li>
-                                    <li><a href="blog-single-fullwidth.html">Blog single full width</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div><!-- end of nav-collapse -->
 
@@ -130,7 +80,7 @@
                     </div>
                 </div>
                 <div class="contact">
-                    <a href="#" class="theme-btn">Donate Now</a>
+                    <a href="{{route('admin.page.donate.list')}}" class="theme-btn">Donate Now</a>
                 </div>
             </div>
             <div class="separator"></div>

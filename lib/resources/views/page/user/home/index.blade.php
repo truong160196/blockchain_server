@@ -5,7 +5,7 @@
 @endsection
 
 @section('css')
-{{--    <link href="{{asset('assets/css_admin/dashboard.css')}}" rel="stylesheet">--}}
+{{--    <link href="{{asset('assets/css_user/page/home.css')}}" rel="stylesheet">--}}
 @endsection
 
 @section('page_content')
@@ -74,7 +74,7 @@
             <div class="row">
                 <div class="col col-md-4 mar-bot-20 recent-cases-thumbs">
                     <div class="recent-cases-thumbs-outer">
-                        <h2>Join  <span class="theme_color">our event &amp;</span> helping us by donation</h2>
+                        <h2>Bidding  <span class="theme_color">our auction &amp;</span> helping us by donation</h2>
                         <div class="recent-case-thumb " data-case="#case-content-1">
                             <div class="content">
                                 <div class="post">
@@ -739,96 +739,9 @@
         <!-- end container -->
     </section>
     <!-- end project-section-s2 -->
-
-    <!--  start meta-blog-section -->
-    <section class="meta-blog-section section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col col-xs-12">
-                    <div class="section-title-s2">
-                        <span>Our Blogs</span>
-                        <h2>Recent News </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-xs-12">
-                    <div class="blog-grids clearfix">
-                        <div class="grid">
-                            <div class="img-holder">
-                                <img src="assets/images/blog/img-8.jpg" alt>
-                            </div>
-                            <div class="date">
-                                <p>16 <span>Jul</span></p>
-                            </div>
-                            <div class="details">
-                                <h3><a href="#">A single person can change million lives</a></h3>
-                                <div class="meta">
-                                    <ul >
-                                        <li><a href="#"><i class="ti-comment"></i> 5 Comment </a></li>
-                                        <li><a href="#"><i class="ti-heart"></i> 9 Love </a></li>
-                                    </ul>
-                                </div>
-                                <p>We are confident to confirm that all members in Charity are professionals in <br> the charity. Donate Fund club .</p>
-                                <div class="view-all">
-                                    <a href="#">Read More </a>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="img-holder">
-                                <img src="assets/images/blog/img-9.jpg" alt>
-                            </div>
-                            <div class="date">
-                                <p>16 <span>Jul</span></p>
-                            </div>
-                            <div class="details">
-                                <h3><a href="#">Donate your woolens this winter </a></h3>
-                                <div class="meta">
-                                    <ul >
-                                        <li><a href="#"><i class="ti-comment"></i> 5 Comment </a></li>
-                                        <li><a href="#"><i class="ti-heart"></i> 9 Love </a></li>
-                                    </ul>
-                                </div>
-                                <p>We are confident to confirm that all members in Charity are professionals in <br> the charity. Donate Fund club .</p>
-
-                                <div class="view-all">
-                                    <a href="#">Read More </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="img-holder">
-                                <img src="assets/images/blog/img-10.jpg" alt>
-                            </div>
-                            <div class="date">
-                                <p>16 <span>Jul</span></p>
-                            </div>
-                            <div class="details">
-                                <h3><a href="#">How to survive the tough path of life</a></h3>
-                                <div class="meta">
-                                    <ul >
-                                        <li><a href="#"><i class="ti-comment"></i> 5 Comment </a></li>
-                                        <li><a href="#"><i class="ti-heart"></i> 9 Love </a></li>
-                                    </ul>
-                                </div>
-                                <p>We are confident to confirm that all members in Charity are professionals in <br> the charity. Donate Fund club .</p>
-
-                                <div class="view-all">
-                                    <a href="#">Read More </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- end container -->
-    </section>
-    <!-- end meta-blog-section -->
 @endsection
 
 @section('js')
-{{--    <script src="{{asset('assets/js_admin/dashboard.js')}}"></script>--}}
+{{--    <script src="{{asset('assets/js_user/page/home.js')}}"></script>--}}
 @endsection
 
