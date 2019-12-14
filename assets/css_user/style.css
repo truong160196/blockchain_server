@@ -315,10 +315,11 @@ img {
     line-height: 45px;
     border: 1px solid rgba(255, 255, 255, 0.25);
     text-align: center;
-    position: absolute;
+    position: fixed;
     z-index: 999;
-    left: calc(50% - 22.5px);
-    top: -22.5px;
+    right: 15px;
+    bottom: 25px;
+    border-radius: 50%;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
@@ -5346,12 +5347,17 @@ img {
 /*--------------------------------------------------------------
 #8.1  shop-pg-section
 --------------------------------------------------------------*/
+.shop-pg-section {
+    margin-top: 50px;
+    padding: 0 10px;
+}
+
 .shop-pg-section .shop-grids {
     margin: 0 -15px;
 }
 
 .shop-pg-section .shop-grids .grid {
-    width: calc(33.33% - 30px);
+    width: calc(16.66% - 40px);
     float: left;
     margin: 0 15px 30px;
 }

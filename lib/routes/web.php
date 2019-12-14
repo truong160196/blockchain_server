@@ -30,4 +30,9 @@ Route::group(['middleware' => ['auth.admin']], function () {
 Route::group(['namespace' => 'User'], function () {
     Route::get('/', 'HomeController@home')->name('admin.page.home');
     Route::get('/home', 'HomeController@home');
+    Route::get('/store', 'StoreController@home');
+});
+
+Route::group(['namespace' => 'Store'], function () {
+    Route::get('/store', 'StoreController@home');
 });
