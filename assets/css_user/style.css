@@ -1272,7 +1272,12 @@ img {
 
 .blog-sidebar .widget {
     padding: 35px 28px;
-    border: 1px solid #ececec;
+    border: 1px solid #dbdbdb;
+    border-radius: 10px 10px 0 0;
+    -webkit-box-shadow: 1px 1px 1px 0px rgba(143,143,143,1);
+    -moz-box-shadow: 1px 1px 1px 0px rgba(143,143,143,1);
+    box-shadow: 1px 1px 1px 0px rgba(143,143,143,1);
+
 }
 
 .blog-sidebar .widget h3 {

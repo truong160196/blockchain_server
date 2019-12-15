@@ -14,8 +14,8 @@
     <div class="account">
         <div class="container">
             <div class="tabs">
-                <a href="{{route('admin.page.account')}}" class="btn btn-secondary btn-tab active" data-index="0">Dashboard</a>
-                <a href="{{route('admin.page.deposit')}}" class="btn btn-secondary btn-tab " data-index="1">Deposit</a>
+                <a href="{{route('admin.page.account')}}" class="btn btn-secondary btn-tab" data-index="0">Dashboard</a>
+                <a href="{{route('admin.page.deposit')}}" class="btn btn-secondary btn-tab active" data-index="1">Deposit</a>
                 <a href="{{route('admin.page.withdraw')}}" class="btn btn-secondary btn-tab " data-index="2">Withdraw</a>
                 <a href="{{route('admin.page.setting')}}" class="btn btn-secondary btn-tab " data-index="3">Setting</a>
             </div>
@@ -23,32 +23,27 @@
                 <div class="blog-sidebar dashboard row">
                     <div class="col-sm-12 col-lg-6">
                         <div class="widget about-widget">
-                            <h3>About</h3>
-                            <div class="img-holder">
-                                <img src="assets/images/blog/about-widget.jpg" alt="">
-                            </div>
-                            <p>Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit.</p>
-                            <h4>Name: Nguyen Quoc Truong</h4>
-                            <h4>Job title: </h4>
-                            <h4>Location: </h4>
-                            <h4>Detail: </h4>
+                            <h3>Account Balance</h3>
+                            <h1>1.35 USDT</h1>
+                            <p>Estimated Value: ~ 250 $</p>
+                            <p>Coins will be deposited after 12 network confirmations.</p>
                         </div>
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <div class="widget about-widget">
-                            <h3>Account Balance</h3>
-                            <h1>1.35 USDT</h1>
-                            <p>Estimated Value: ~ 250 $</p>
-                        </div>
-                        <div class="widget about-widget">
-                            <h3>Donate Balance</h3>
-                            <h1>0.5 USDT</h1>
-                            <p>Estimated Value: ~ 100 $</p>
+                            <h3>Address</h3>
+                            <input type="text" class="form-control" readonly value="0x4a1c38838a3f71dca80001ea26694f005728eaad" />
+                            <div class="button-depoist">
+                                <button class="btn btn-deposit">Copy Address</button>
+                                <button class="btn btn-deposit">Show QR Code</button>
+                            </div>
+                            <strong>Send only BTC to this deposit address.</strong>
+                            <p>Sending coin or BTC other than ETH to this address may result in the loss of your deposit.</p>
                         </div>
                     </div>
                     <div class="col-sm-12">
                         <div class="widget about-widget">
-                            <h3>History</h3>
+                            <h3>Deposit History</h3>
                             <div class="table-history">
                                 <table class="table table-striped">
                                     <thead>

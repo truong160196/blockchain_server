@@ -12,4 +12,19 @@ class AccountController extends Controller
     {
         return view('page.user.account.index');
     }
+
+    public function deposit()
+    {
+        return view('page.user.account.deposit');
+    }
+
+    public function withdraw()
+    {
+        return view('page.user.account.withdraw');
+    }
+
+    public function setting()
+    {
+        return view('page.user.account.setting');
+    }
 }

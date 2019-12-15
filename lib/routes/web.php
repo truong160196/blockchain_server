@@ -52,6 +52,9 @@ Route::group(['namespace' => 'User'], function () {
 
     // account
     Route::get('/account', 'AccountController@index')->name('admin.page.account');
+    Route::get('/account/deposit', 'AccountController@deposit')->name('admin.page.deposit');
+    Route::get('/account/withdraw', 'AccountController@withdraw')->name('admin.page.withdraw');
+    Route::get('/account/setting', 'AccountController@setting')->name('admin.page.setting');
 });
 
 Route::group(['namespace' => 'Store'], function () {
